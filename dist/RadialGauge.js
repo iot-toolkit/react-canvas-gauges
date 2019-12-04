@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,11 +6,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _canvasGauges = require('canvas-gauges');
+var _nonlinearCanvasGauges = require("nonlinear-canvas-gauges");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,25 +30,25 @@ var ReactRadialGauge = function (_React$Component) {
   }
 
   _createClass(ReactRadialGauge, [{
-    key: 'componentDidMount',
+    key: "componentDidMount",
     value: function componentDidMount() {
       var options = Object.assign({}, this.props, {
         renderTo: this.el
       });
-      this.gauge = new _canvasGauges.RadialGauge(options).draw();
+      this.gauge = new _nonlinearCanvasGauges.RadialGauge(options).draw();
     }
   }, {
-    key: 'componentWillReceiveProps',
+    key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
       this.gauge.value = nextProps.value;
       this.gauge.update(nextProps);
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var _this2 = this;
 
-      return _react2.default.createElement('canvas', { ref: function ref(canvas) {
+      return _react2.default.createElement("canvas", { ref: function ref(canvas) {
           _this2.el = canvas;
         } });
     }

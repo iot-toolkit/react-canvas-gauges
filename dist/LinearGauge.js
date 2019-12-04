@@ -10,7 +10,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _canvasGauges = require('canvas-gauges');
+var _nonlinearCanvasGauges = require('nonlinear-canvas-gauges');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,7 +35,7 @@ var ReactLinearGauge = function (_React$Component) {
       var options = Object.assign({}, this.props, {
         renderTo: this.el
       });
-      this.gauge = new _canvasGauges.LinearGauge(options).draw();
+      this.gauge = new _nonlinearCanvasGauges.LinearGauge(options).draw();
     }
   }, {
     key: 'componentWillReceiveProps',

@@ -4,8 +4,6 @@ import { RadialGauge } from "nonlinear-canvas-gauges";
 
 class ReactRadialGauge extends React.Component {
   componentDidMount() {
-    console.log("check");
-
     const options = Object.assign({}, this.props, {
       renderTo: this.el
     });
@@ -19,11 +17,9 @@ class ReactRadialGauge extends React.Component {
 
   render() {
     return (
-      <canvas
-        ref={canvas => {
-          this.el = canvas;
-        }}
-      />
+      <canvas ref={canvas => {
+        this.el = canvas;
+      }} />
     );
   }
 }

@@ -17,10 +17,10 @@ class ReactLinearGauge extends React.Component {
 
   render() {
     return (
-      <canvas ref={(canvas) => {
+      <canvas ref={canvas => {
         this.el = canvas
       }} />
-    )
+    );
   }
 }
 
