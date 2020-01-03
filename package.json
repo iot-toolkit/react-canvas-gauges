@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/1995parham/react-canvas-gauges#readme",
   "dependencies": {
-    "nonlinear-canvas-gauges": "^1.1.11"
+    "nonlinear-canvas-gauges": "^1.1.12"
   },
   "peerDependencies": {
     "react": "15.x"
